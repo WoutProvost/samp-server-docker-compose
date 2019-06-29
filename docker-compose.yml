@@ -16,9 +16,9 @@ services:
 
   # MySQL Database
   samp_db:
-    image: mysql                        # Latest MySQL runtime as parent image
-    command:                            # Disable caching_sha2_password plugin to allow SA-MP server to connect
+    image: mysql                      # Latest MySQL runtime as parent image
+    command:                          # Disable caching_sha2_password plugin to allow SA-MP server to connect
       --default-authentication-plugin=mysql_native_password
-    container_name: samp_db             # Container name, use this as database host to establish connection
-    environment:                        # Add environment variables
+    container_name: samp_db           # Container name, use this as database host to establish connection
+    environment:                      # Add environment variables
       MYSQL_ROOT_PASSWORD: root
